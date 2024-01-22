@@ -1,5 +1,8 @@
 package net.etherealmc.dimensionmod;
 
+import net.etherealmc.dimensionmod.block.ModBlocks;
+import net.etherealmc.dimensionmod.item.ModItemGroups;
+import net.etherealmc.dimensionmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +14,9 @@ public class DimensionMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
+		ModBlocks.registerModBlocks();
+
+		ModItems.registerModItems();
 	}
 }

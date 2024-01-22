@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "dimensionmod",
+	"version": "${version}",
+	"name": "Dimension Mod",
+	"description": "This is a mod creating a custom dimension with custom items, mobs and blocks!",
+	"authors": [
+		"Ethereal_MC"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/dimensionmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.etherealmc.dimensionmod.DimensionMod"
+		],
+		"client": [
+			"net.etherealmc.dimensionmod.DimensionModClient"
+		],
+		"fabric-datagen": [
+			"net.etherealmc.dimensionmod.DimensionModDataGenerator"
+		]
+	},
+	"mixins": [
+		"dimensionmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
